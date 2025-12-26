@@ -1,0 +1,296 @@
+.product-card1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 420px; /* Увеличил высоту для широкой картинки */
+    text-decoration: none;
+    background-color: var(--bg-primary);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.product-card1:hover{
+    cursor: pointer;
+    background-color: var(--someItem-primary);
+}
+.product-content1{
+    padding: 20px 15px 0px 15px; /* Уменьшил отступы для ширины */
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+}
+.underline1{
+    width: 100%; 
+    height: 3%; 
+    background-color: #e37243; 
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+}
+.product-description1{
+    color: var(--text-primary);
+    margin-bottom: 5px;
+    text-decoration: none;
+    font: 400 calc(11px + 2 * (100vw/1440) ) Inter, sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Новые стили для информации о матрасе */
+.product-material,
+.product-fill,
+.product-orthopedic,
+.product-sizes {
+    color: var(--text-primary);
+    font: 400 calc(10px + 1 * (100vw/1440)) Inter, sans-serif;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-sizes {
+    margin-top: 5px;
+}
+
+.size-item {
+    display: inline-block;
+    background: var(--someItem-primary);
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    font-size: 0.8em;
+}
+
+.more-sizes {
+    color: var(--text-primary);
+    font-size: 0.8em;
+}
+
+.product-name1{
+    color: var(--text-primary);
+    font: 700 calc(12px + 2 * (100vw/1440) ) Inter, sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+}
+.product-price1{
+    color: var(--text-primary);
+    font: 700 calc(12px + 2 * (100vw/1440) ) Inter, sans-serif;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 8px;
+}
+.product-img-container1{
+    display: flex;
+    height: 200px; /* Увеличил высоту для широкой картинки */
+    justify-content: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.product-img1{
+    width: 95%; /* Широкая картинка */
+    height: auto; /* Автоматическая высота */
+    max-height: 100%; /* Не больше контейнера */
+    object-fit: cover; 
+}
+.product-img-entry-mattresss1{
+    width: 95%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    margin-top: 10px;
+}
+.product-img-entry-mattresss1:first-child{
+    margin-right: 8px;
+}
+.text-container1{
+    margin-bottom: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.loading-spinner {
+    color: var(--text-primary);
+    font: 400 calc(12px + 2 * (100vw/1440) ) Inter, sans-serif;
+    align-self: center;
+    align-items: center;
+}
+
+/* Стили для экранов 1920px и меньше */
+@media (max-width: 2720px) {
+    .a {
+        width: calc(100% / 7 - 20px);
+        height: auto;
+    }
+    .product-card1{
+        height: 400px;
+    }
+    .product-img-container1{
+        height: 180px;
+    }
+}
+
+/* Стили для экранов 1920px и меньше */
+@media (max-width: 1920px) {
+    .a {
+        width: calc(100% / 6 - 20px);
+        height: auto;
+    }
+    .product-card1{
+        height: 400px;
+    }
+    .product-img-container1{
+        height: 180px;
+    }
+}
+
+/* Стили для экранов от 1810px до 1920px */
+@media (max-width: 1810px) {
+    .a {
+        width: calc(100% / 5 - 20px);
+    }
+    .product-card1{
+        height: 400px;
+    }
+    .product-img-container1{
+        height: 180px;
+    }
+}
+
+/* Стили для экранов от 1500px до 1810px */
+@media (max-width: 1500px) {
+   .a {
+        width: calc(100% / 4 - 20px);
+    }
+    .product-card1{
+        height: 400px;
+    }
+    .product-img-container1{
+        height: 180px;
+    }
+}
+
+/* Стили для экранов от 780px до 1500px */
+@media (max-width: 1200px) {
+    .a {
+        width: calc(100% / 3 - 20px);
+    }
+    .product-card1{
+        height: 420px;
+    }
+    .product-content1 {
+        height: 90%;
+    }
+    .product-img-container1{
+        height: 190px;
+    }
+}
+
+/* Стили для экранов от 680px до 780px */
+@media (max-width: 980px) {
+    .a {
+        width: calc(100% / 3 - 20px);
+    }
+    .product-card1{
+        height: 380px;
+    }
+    .product-img-container1{
+        height: 170px;
+    }
+    .product-content1 {
+        height: 88%;
+    }
+}
+
+/* Стили для экранов от 680px до 780px */
+@media (max-width: 780px) {
+    .a {
+        width: calc(100% / 3 - 15px);
+    }
+    .product-card1{
+        height: 360px;
+    }
+    .product-img-container1{
+        height: 160px;
+    }
+    .product-content1 {
+        height: 88%;
+    }
+    
+    .product-material,
+    .product-fill,
+    .product-orthopedic,
+    .product-sizes {
+        font-size: 0.7em;
+    }
+}
+
+/* Стили для экранов от 680px до 780px */
+@media (max-width: 680px) {
+    .a {
+        width: calc(100% / 2 - 15px);
+    }
+    .product-card1{
+        height: 350px;
+    }
+    .product-img-container1{
+        height: 150px;
+    }
+    .product-content1 {
+        height: 88%;
+    }
+    
+    .product-img1,
+    .product-img-entry-mattresss1 {
+        width: 92%; /* Чуть уже на мобильных */
+    }
+}
+
+/* Стили для экранов от 680px до 780px */
+@media (max-width: 480px) {
+    .a {
+        width: calc(100% / 2 - 10px);
+    }
+    .product-card1{
+        height: 320px;
+    }
+    .product-img-container1{
+        height: 140px;
+    }
+    .product-content1 {
+        height: 86%;
+    }
+    
+    .product-img1,
+    .product-img-entry-mattresss1 {
+        width: 90%;
+    }
+    
+    .product-material,
+    .product-fill,
+    .product-orthopedic,
+    .product-sizes {
+        font-size: 0.6em;
+    }
+    
+    .size-item {
+        padding: 1px 4px;
+        font-size: 0.7em;
+    }
+}

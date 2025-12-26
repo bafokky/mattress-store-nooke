@@ -1,0 +1,124 @@
+@media (max-width: 960px) and  (min-width: 480px) {
+    .content-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .separation-container:nth-child(2){
+       display: none;
+    }
+    .main-text{
+        margin-bottom: 0;
+    }
+}
+
+.about-us-section{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.content-container{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    padding-bottom: 80px;
+}
+/* (max-width: 680px) and (min-width: 480px) */
+.separation-container{
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.title{
+    flex: 0 0 auto;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    font: 700 calc(20px + 6 * (100vw/1440) ) Inter, sans-serif;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+.separation-line-1{
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 2px solid #e37243;
+}
+.button-with-line{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.before-text{
+    flex: 0 0 auto;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+    font: 700 calc(12px + 2 * (100vw/1440) ) Inter, sans-serif;
+    color: var(--text-primary);
+}
+.main-text{
+    flex: 0 0 auto;
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 15px;
+    font: 400 calc(12px + 2 * (100vw/1440) ) Inter, sans-serif;
+    color: var(--text-primary);
+    margin-bottom: 70px;
+}
+.separation-line-2{
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: 40px;
+    border-top: 2px solid #e37243;
+}
+
+
+.separation-container:first-child{
+    margin-right: 5vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.separation-container:nth-child(2) {
+    background-image: url('../assets/img/salon.jpg'); 
+    background-size: cover; /* Заполнить элемент изображением */
+    background-repeat: no-repeat; /* Не повторять изображение */
+    background-position: center; /* Центрировать изображение */
+}
+
+.separation-container > .button-with-line > .button-link-aboutUs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 960px){
+    .content-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .separation-container:nth-child(2){
+       display: none;
+    }
+    .before-text{
+        margin-top: 20px;
+    }
+    .main-text{
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px){
+    .before-text{
+        font-size: calc(12px + (2 + 2 * 0.7)*((100vw - 320px)) / 1440);
+    }
+    .main-text{
+        font-size: calc(12px + (2 + 2 * 0.7)*((100vw - 320px)) / 1440);
+    }
+    .title{
+        font-size: calc(20px + (6 + 6 * 0.7)*((100vw - 320px)) / 1440);
+    }
+}

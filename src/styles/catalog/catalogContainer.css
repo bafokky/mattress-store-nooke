@@ -1,0 +1,224 @@
+.catalog-container-main{
+    display: flex;
+    margin-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.catalog-container{
+    width: 80%;
+    gap: 2vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.icon-image {
+    margin-left: 5px;
+    margin-right: 12px;
+}
+.product-list{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.pagination button {
+    margin: 0 5px;
+    height: 25px;
+    width: 25px;
+    border: none;
+    font: 700 calc(14px + 2 * (100vw/1440) ) Inter, sans-serif;
+    background-color: #d2d2d2;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.pagination button.active {
+    background-color: #e37243;
+}
+
+.pagination button:hover {
+    background-color: #e37243;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    height: 20px;
+    padding: 5px;
+    background-color: var(--bg-primary);
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 230px;
+}
+
+.search-input {
+  width: 85%;
+    outline: none;
+    font: 400 calc(12px + 2 * (100vw/1440)) Inter, sans-serif;
+    color: var(--input);
+    background-color: var(--bg-primary);
+    border: none;
+}
+
+.search-input::placeholder {
+    color: var(--someItem-primary);
+    font-style: italic;
+}
+
+/* Плашка "Цена" */
+.price-filter-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-primary);
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-width: 100px;
+    justify-content: center;
+    height: 30px;
+}
+
+.price-filter-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+}
+
+.price-filter-label {
+    font: 700 calc(12px + 2 * (100vw/1440)) Inter, sans-serif;
+    color: var(--input);
+    white-space: nowrap;
+}
+
+.price-filter-arrow {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid var(--input);
+    transition: transform 0.3s ease;
+}
+
+.price-filter-arrow.open {
+    transform: rotate(180deg);
+}
+
+.price-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-primary);
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    margin-top: 5px;
+    padding: 10px 0;
+    min-width: 180px;
+}
+
+.price-option {
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.price-option:hover {
+    background-color: rgba(227, 114, 67, 0.1);
+}
+
+.price-option input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.price-option label {
+    font: 400 calc(12px + 2 * (100vw/1440)) Inter, sans-serif;
+    color: var(--input);
+    cursor: pointer;
+    width: 100%;
+}
+
+
+.filter-section{
+    display: flex;
+    flex-direction: row;
+    width: 76%;
+    justify-content: space-between;
+    background-color: var(--bg-primary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 5%;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    margin-top: -40px;
+    align-items: center;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 960px) and (min-width: 680px) {
+    .search-bar{
+        max-width: 180px;
+    }
+    .filter-section{
+        width: 90%;
+        gap: 10px;
+    }
+    .price-filter-container {
+        min-width: 80px;
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 680px) and (min-width: 580px) {
+    .filter-section{
+        flex-direction: column;
+        width: 83%;
+        gap: 10px;
+    }
+    .search-bar{
+        width: 100%;
+        padding: 5px 0px;
+    }
+    .price-filter-container {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 580px){
+    .filter-section{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 6px;
+        margin-bottom: 20px;
+        padding: 10px 0px;
+    }
+    .search-bar{
+        width: 224px;
+    }
+    .product-list{
+        justify-content: center;
+    }
+    .price-filter-container {
+        width: 224px;
+        margin: 5px 0;
+    }
+}

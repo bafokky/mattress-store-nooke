@@ -1,0 +1,343 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #383534;
+  --someItem-primary:#f0f0f0;
+  --input: #747474;
+}
+
+.dark-theme {
+  --bg-primary: #454241;
+  --text-primary: #ffffff;
+  --someItem-primary:#545252;
+  --input: #dedcdc;
+}
+
+body{
+  background-color: var(--bg-primary);
+}
+header {
+  display: flex;
+  position: sticky; /* Липкое позиционирование */
+  top: 0; /* Привязка к верхней части окна при прокрутке */
+  justify-content: center;
+  align-items: center;
+  height: 63px;
+  padding: 5px;
+  background-color:var(--bg-primary);
+  z-index: 1000; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* загрузка сайта */
+
+.loading  {
+  width: 80px;
+  height: 100px;
+  margin: 100px auto;
+  margin-top: calc(100vh / 2 - 50px);
+}
+
+.block {
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  margin: 0 10px 10px 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: #e37243;
+}
+
+.block:nth-child(4n+1) { animation: wave 2s ease .0s infinite; }
+.block:nth-child(4n+2) { animation: wave 2s ease .2s infinite; }
+.block:nth-child(4n+3) { animation: wave 2s ease .4s infinite; }
+.block:nth-child(4n+4) { animation: wave 2s ease .6s infinite; margin-right: 0; }
+
+@keyframes wave {
+  0%   { top: 0;     opacity: 1; }
+  50%  { top: 30px;  opacity: .2; }
+  100% { top: 0;     opacity: 1; }
+}
+
+.title-company{
+  font: 700 calc(14px + 6 * (100vw/1440) ) Inter, sans-serif;
+  padding-left: 20px;
+  margin-top: 3px;
+  color: var(--text-primary);
+}
+
+.container-header{
+  width: 80%;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+.links-button-container{
+  display: flex;
+  flex-direction: row;
+}
+.logo-container{
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.link-container{
+  display: flex;
+  align-items: center;
+}
+.links{
+  margin-top: 3px;
+  font: 400 calc(12px + 2 * (100vw/1440) ) Inter, sans-serif;
+  text-decoration: none;
+  color: var(--text-primary);
+  cursor: pointer;
+}
+.links:hover{
+  color: #e37243;
+  cursor: pointer;
+}
+.logo{
+  height: 40px;
+}
+
+.burger-checkbox{
+  visibility: hidden;
+}
+.burger{
+  visibility: hidden;
+}
+.menu-list{
+  display: flex;
+  align-items: center;
+  gap: 3.125vw;
+  padding-right: 5.833vw;
+}
+.menu-list > li{
+  list-style-type: none; /* Убирает маркеры */
+  padding: 0; /* Убирает отступы */
+  margin: 0;
+}
+
+/* Стили для выпадающего подменю */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none; /* Скрыто по умолчанию */
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: var(--bg-primary);
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  flex-direction: column;
+  list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  width: 200px; /* Появляется при наведении */
+}
+
+.dropdown-item {
+  padding: 5px 15px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font: 400 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(227, 114, 67, 0.2);
+  color: #e37243;
+  
+}
+/* Общий стиль для ссылки "Каталог" с стрелкой */
+.dropdown-link {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Стили для стрелки */
+.arrow {
+  display: inline-block;
+  margin-top: 2px;
+  margin-left: 8px; /* Отступ между текстом и стрелкой */
+  width: 5px;
+  height: 5px;
+  border: solid #e37243;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-135deg);
+  transition: transform 0.3s ease; /* Плавная анимация вращения */
+}
+
+/* При наведении на ссылку стрелка переворачивается */
+.dropdown:hover .arrow {
+  transform: rotate(45deg); /* Поворот на 180 градусов */
+}
+
+.theme-toggle {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 2px solid transparent;
+  padding: 8px 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  font: 400 calc(12px + 2 * (100vw/1440)) Inter, sans-serif;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 10px;
+}
+
+@media (max-width: 960px) {
+
+.main-content {
+  transition: margin-top 0.3s; 
+}
+
+.main-content.shifted {
+  margin-top: 200px;
+}
+  
+  .title-company{
+      font-size: calc(14px + (6 + 6 * 0.7)*((100vw - 320px)) / 1440);
+  }
+  .links{
+      transition: transform 0.5s, opacity 0.1s;
+      font-size: calc(14px + (2 + 2 * 0.7)*((100vw - 320px)) / 1440);
+      height: 40px;
+      margin-top: 0;
+      align-content: center;
+  }
+  .links:hover{
+      color: #e37243;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  .links:checked{
+    color: #e37243;
+    font-weight: bold;
+}
+  .line-div{
+    height: 0.3px; /* Высота полоски */
+    width: 100%; /* Занимает всю ширину li */
+    background-color: rgb(230, 230, 230); /* Цвет полоски */
+    
+  }
+  .menu-list >li{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 80vw;
+  }
+  .burger-checkbox {
+      position: absolute;
+  }
+  .burger {
+      visibility: inherit;
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      display: block;
+      border: none;
+      background: transparent;
+      width: 23px; /* Уменьшено в 2 раза */
+      height: 20px; /* Уменьшено в 2 раза */
+  }
+
+  .burger::before,
+  .burger::after {
+      content: '';
+      left: 0;
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 3px; /* Уменьшено в 2 раза */
+      border-radius: 10px;
+      background: #000;
+  }
+
+  .burger::before {
+      top: 0;
+      box-shadow: 0 8px 0 #000; /* Уменьшено для пропорциональности */
+      transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+  }
+
+  .burger::after {
+      bottom: 0;
+      transition: bottom .3s .15s, transform .3s;
+  }
+
+  .burger-checkbox:checked + .burger::before {
+      top: 10px; /* Уменьшено в 2 раза */
+      transform: rotate(45deg);
+      box-shadow: 0 7px 0 rgba(0,0,0,0); /* Уменьшено для пропорциональности */
+      transition: box-shadow .15s, top .3s, transform .3s .15s;
+  }
+
+  .burger-checkbox:checked + .burger::after {
+      bottom: 7px; /* Уменьшено в 2 раза */
+      transform: rotate(-45deg);
+      transition: bottom .3s, transform .3s .15s;
+  }
+  .menu-list {
+    top: 73px;
+    left: 0;
+    gap: 0;
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding: 20px 0 30px 0;
+    margin: 0;
+    background: white;
+    list-style-type: none;
+    transform: translateY(-30%); 
+    transition: opacity 0.3s , transform 0.3s; /* Плавный переход для трансформации и прозрачности */
+    opacity: 0; /* Изначально невидимо */
+    visibility: hidden; /* Скрываем элемент */
+    z-index: -1; /* Убедитесь, что меню находится под другими элементами */
+  }
+  .burger-checkbox:checked ~ .menu-list {
+     /* Возвращаем в исходное положение */
+    visibility: visible;
+    opacity: 1; /* Делаем видимым */
+    transform: translateY(0);
+    width: 100%;
+     /* Показываем элемент */
+    z-index: 1; /* Поднимаем на передний план */
+    background-color: var(--bg-primary);
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+    padding: 0px 0px 10px 0px;
+    box-shadow: none; /* Скрываем в мобильной версии */
+  }
+
+  .burger-checkbox:checked ~ .menu-list .dropdown-menu {
+    display: flex; /* Показ в бургер-меню */
+    flex-direction: column;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: flex;
+    width: 100%;
+    
+  }
+
+}

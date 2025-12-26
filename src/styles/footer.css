@@ -1,0 +1,177 @@
+.main-content-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 100%;
+    background: #383534;
+}
+
+.company-info-section {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 80%;
+    gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.exclusive-mattress-firm-section { /* Изменено */
+    display: flex;
+    width: 55vw;
+    flex-direction: column;
+    margin-right: 2vw;
+    justify-content: space-between;
+}
+.flex-container-with-text {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+.company-title-container {
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .company-title-style {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font: 700 calc(14px + 6 * (100vw/1440) ) Inter, sans-serif;
+    color: #f2f2f2;
+  }
+  .company-header-separator {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 8px;
+    border-top: 2px solid #e37243;
+    margin-left: 24px;
+  }
+  .exclusive-mattress-styles { /* Изменено */
+    box-sizing: border-box;
+    margin-top: 12px;
+  }
+  .exclusive-mattress-text { /* Изменено */
+    box-sizing: border-box;
+    max-width: 409px;
+    padding: 0;
+    margin: 0;
+    font: 200 calc(12px + 2 * (100vw/1440) ) Inter, sans-serif;
+    color: #bdbdbd;
+    text-align: left;
+  }
+  .exclusive-mattress-gallery { /* Изменено */
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 22px;
+  }
+
+.location-icon{
+    height: 20px;
+    width: 20px;
+}
+.under-separator{
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 8px;
+    border-top: 2px solid #e37243;
+    margin-top: 17px;
+}
+
+
+/* КОНТАКТЫ */
+p{
+    margin: 0;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+.simple-contact-info{
+    display: flex;
+    align-items: start;
+}
+.simple-contact-info{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+.simple-contact-info:not(:first-child) {
+    margin-top: 40px;
+}
+.title-contact-container{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+.contact-info-style{
+    font: 200 calc(12px + 2 * (100vw/1440) ) Inter, sans-serif;
+    color: #bdbdbd;
+    text-align: left;
+}
+.email-link{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #bdbdbd;
+    text-align: left;
+    font: 200 calc(12px + 2 * (100vw/1440) ) Inter, sans-serif;
+}
+.title-contact{
+    font: 700 calc(14px + 6 * (100vw/1440) ) Inter, sans-serif;
+    color: #f2f2f2;
+}
+.title-icon{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+.orange-line{
+    width: 100%;
+    background-color: #e37243;
+    height: 43px;
+}
+
+@media(max-width: 480px){
+    .flex-container-with-text{
+        margin-top: 20px;
+    }
+    .exclusive-mattress-gallery{ /* Изменено */
+        justify-content: flex-end;
+    }
+    .simple-contact-info:not(:first-child){
+        margin-top: 10px;
+    }
+    .exclusive-mattress-firm-section{ /* Изменено */
+        width: 100%;
+        margin-right: 0px;
+    }
+    .company-info-section{
+        gap: 0px;
+        flex-direction: column-reverse;
+    }
+    .email-link{
+        font-size: calc(12px + (2 + 2 * 0.7)*((100vw - 320px)) / 1440);
+    }
+    .contact-info-style{
+        font-size: calc(12px + (2 + 2 * 0.7)*((100vw - 320px)) / 1440);
+    }
+    .exclusive-mattress-text{ /* Изменено */
+        font-size: calc(12px + (2 + 2 * 0.7)*((100vw - 320px)) / 1440);
+    }
+    .company-title-style{
+        font-size: calc(14px + (6 + 6 * 0.7)*((100vw - 320px)) / 1440);
+    }
+    .title-contact{
+        font-size: calc(14px + (4 + 4 * 0.7)*((100vw - 320px)) / 1440);
+    }
+}

@@ -1,0 +1,32 @@
+*{
+  margin: 0; /* Сбрасываем все внешние отступы */
+  padding: 0; /* Сбрасываем все внутренние отступы */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  padding: 0;
+  height: 100%; /* Убедитесь, что высота занимает всё окно */
+  z-index: -1;
+  background-repeat: repeat-y; /* Повторять по вертикали */
+    background-size: 100% auto; /* Растянуть по ширине, высота авто */
+
+}
+a{
+  text-decoration: none;
+}
+::selection {
+  background-color: #e37243; /* Цвет фона выделенного текста */
+  color: white; /* Цвет текста при выделении */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

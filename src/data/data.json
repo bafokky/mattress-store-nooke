@@ -1,0 +1,668 @@
+[
+    {
+        "id": 1,
+        "name": "Comfort F1",
+        "type": "Пружинные",
+        "img": "/imgProducts/vegas/vegas_1.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Латекс",
+        "size": [
+           "100 x 180",
+           "120 x 180",
+           "120 x 200",
+           "140 x 190",
+           "140 x 200",
+           "160 x 190",
+           "160 x 200",
+           "180 x 190",
+           "180 x 200",
+           "200 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 850
+    },
+    {
+        "id": 2,
+        "name": "Идеал Тип 4",
+        "type": "Беспружинные",
+        "img": "/imgProducts/eos/eos_1.jpg",
+        "material": "Жёсткий",
+        "fill": "Кокосовая койра",
+        "size": [
+            "120 x 200",
+            "140 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 620
+    },
+    {
+        "id": 3,
+        "name": "Top-Soft",
+        "type": "Пружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_3.jpg",
+        "material": "Мягкий",
+        "fill": "Пена Serta",
+        "size": [
+            "120 x 200",
+            "140 x 200",
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 540
+    },
+    {
+        "id": 4,
+        "name": "Классик-М",
+        "type": "Пружинные",
+        "img": "/imgProducts/belson/belson_1.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Синтепон",
+        "size": [
+            "100 x 180",
+            "160 x 190",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 310
+    },
+    {
+        "id": 5,
+        "name": "Modern M3",
+        "type": "Беспружинные",
+        "img": "/imgProducts/vegas/vegas_2.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Memory пена",
+        "size": [
+            "100 x 180",
+           "120 x 180",
+           "120 x 200",
+           "140 x 190",
+           "140 x 200",
+           "160 x 190",
+           "160 x 200",
+           "180 x 190",
+           "180 x 200",
+           "200 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 1450
+    },
+    {
+        "id": 6,
+        "name": "Премьер 12",
+        "type": "Пружинные",
+        "img": "/imgProducts/eos/eos_2.jpg",
+        "material": "Жёсткий",
+        "fill": "Войлок",
+        "size": [
+            "120 x 200",
+            "140 x 200",
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 780
+    },
+    {
+        "id": 7,
+        "name": "Sleep Master 500",
+        "type": "Пружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_1.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Ортопедическая пена",
+        "size": [
+            "120 x 200",
+            "140 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 490
+    },
+    {
+        "id": 8,
+        "name": "Kids Dream S1",
+        "type": "Беспружинные",
+        "img": "/imgProducts/belson/belson_2.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Пена Serta",
+        "size": [
+            "100 x 180",
+            "120 x 180"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 280
+    },
+    {
+        "id": 9,
+        "name": "Ecolatex L5",
+        "type": "Беспружинные",
+        "img": "/imgProducts/vegas/vegas_3.jpg",
+        "material": "Мягкий",
+        "fill": "Латекс",
+        "size": [
+            "140 x 200",
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 1890
+    },
+    {
+        "id": 10,
+        "name": "Аспект",
+        "type": "Пружинные",
+        "img": "/imgProducts/eos/eos_3.jpg",
+        "material": "Жёсткий",
+        "fill": "Кокосовая койра",
+        "size": [
+            "100 x 180",
+            "120 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 950
+    },
+    {
+        "id": 11,
+        "name": "Bio Life Balance",
+        "type": "Пружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_3.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Ортопедическая пена",
+        "size": [
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 670
+    },
+    {
+        "id": 12,
+        "name": "Стандарт",
+        "type": "Пружинные",
+        "img": "/imgProducts/belson/belson_3.jpg",
+        "material": "Жёсткий",
+        "fill": "Войлок",
+        "size": [
+            "100 x 180",
+            "120 x 200",
+            "140 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 350
+    },
+    {
+        "id": 13,
+        "name": "Exclusive X2",
+        "type": "Пружинные",
+        "img": "/imgProducts/vegas/vegas_4.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Memory пена",
+        "size": [
+            "160 x 200",
+            "180 x 200",
+            "200 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 2400
+    },
+    {
+        "id": 14,
+        "name": "Виктория",
+        "type": "Пружинные",
+        "img": "/imgProducts/eos/eos_1.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Латекс",
+        "size": [
+            "140 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 1100
+    },
+    {
+        "id": 15,
+        "name": "G7",
+        "type": "Беспружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_1.jpg",
+        "material": "Жёсткий",
+        "fill": "Кокосовая койра",
+        "size": [
+            "100 x 180",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 720
+    },
+    {
+        "id": 16,
+        "name": "Хит",
+        "type": "Пружинные",
+        "img": "/imgProducts/belson/belson_4.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Синтепон",
+        "size": [
+            "100 x 180",
+           "120 x 180",
+           "120 x 200",
+           "140 x 190",
+           "140 x 200",
+           "160 x 190",
+           "160 x 200",
+           "180 x 190",
+           "180 x 200",
+           "200 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 410
+    },
+    {
+        "id": 17,
+        "name": "Smart Z3",
+        "type": "Пружинные",
+        "img": "/imgProducts/vegas/vegas_1.jpg",
+        "material": "Жёсткий",
+        "fill": "Кокосовая койра",
+        "size": [
+            "120 x 200",
+            "140 x 200",
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 980
+    },
+    {
+        "id": 18,
+        "name": "Лайт-2",
+        "type": "Беспружинные",
+        "img": "/imgProducts/eos/eos_2.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Ортопедическая пена",
+        "size": [
+            "100 x 180",
+            "120 x 180"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 450
+    },
+    {
+        "id": 19,
+        "name": "Sweet Night 2024",
+        "type": "Пружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_2.jpg",
+        "material": "Мягкий",
+        "fill": "Memory пена",
+        "size": [
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 890
+    },
+    {
+        "id": 20,
+        "name": "Оптима",
+        "type": "Беспружинные",
+        "img": "/imgProducts/belson/belson_5.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Пена Serta",
+        "size": [
+            "120 x 200",
+            "140 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 550
+    },
+    {
+        "id": 21,
+        "name": "Relax Pro",
+        "type": "Пружинные",
+        "img": "/imgProducts/vegas/vegas_2.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Латекс",
+        "size": [
+            "140 x 200",
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 1350
+    },
+    {
+        "id": 22,
+        "name": "Тип 9а",
+        "type": "Пружинные",
+        "img": "/imgProducts/eos/eos_3.jpg",
+        "material": "Жёсткий",
+        "fill": "Кокосовая койра",
+        "size": [
+            "120 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 830
+    },
+    {
+        "id": 23,
+        "name": "Kinder",
+        "type": "Беспружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_1.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Ортопедическая пена",
+        "size": [
+            "100 x 180",
+           "120 x 180",
+           "120 x 200",
+           "140 x 190",
+           "160 x 200",
+           "180 x 190",
+           "180 x 200",
+           "200 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 320
+    },
+    {
+        "id": 24,
+        "name": "Гранд",
+        "type": "Пружинные",
+        "img": "/imgProducts/belson/belson_1.jpg",
+        "material": "Жёсткий",
+        "fill": "Войлок",
+        "size": [
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 680
+    },
+    {
+        "id": 25,
+        "name": "Active A1",
+        "type": "Пружинные",
+        "img": "/imgProducts/vegas/vegas_3.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Пена Serta",
+        "size": [
+            "120 x 200",
+            "140 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 750
+    },
+    {
+        "id": 26,
+        "name": "Элит 55",
+        "type": "Беспружинные",
+        "img": "/imgProducts/eos/eos_1.jpg",
+        "material": "Мягкий",
+        "fill": "Латекс",
+        "size": [
+           "100 x 180",
+           "120 x 180",
+           "120 x 200",
+           "140 x 190",
+           "140 x 200",
+           "160 x 190",
+           "160 x 200",
+           "180 x 190",
+           "180 x 200",
+           "200 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 1650
+    },
+    {
+        "id": 27,
+        "name": "Strong",
+        "type": "Пружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_2.jpg",
+        "material": "Жёсткий",
+        "fill": "Кокосовая койра",
+        "size": [
+            "120 x 200",
+            "140 x 200",
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 920
+    },
+    {
+        "id": 28,
+        "name": "Софт",
+        "type": "Беспружинные",
+        "img": "/imgProducts/belson/belson_2.jpg",
+        "material": "Мягкий",
+        "fill": "Синтепон",
+        "size": [
+            "100 x 180",
+            "120 x 200",
+            "140 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 290
+    },
+    {
+        "id": 29,
+        "name": "Mega M1",
+        "type": "Пружинные",
+        "img": "/imgProducts/vegas/vegas_4.jpg",
+        "material": "Жёсткий",
+        "fill": "Кокосовая койра",
+        "size": [
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 1150
+    },
+    {
+        "id": 30,
+        "name": "Оптима 8",
+        "type": "Пружинные",
+        "img": "/imgProducts/eos/eos_2.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Ортопедическая пена",
+        "size": [
+            "100 x 180",
+            "120 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 640
+    },
+    {
+        "id": 31,
+        "name": "Top Latex 7-Zones",
+        "type": "Беспружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_3.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Латекс",
+        "size": [
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 1280
+    },
+    {
+        "id": 32,
+        "name": "Эконом",
+        "type": "Пружинные",
+        "img": "/imgProducts/belson/belson_3.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Войлок",
+        "size": [
+           "140 x 200",
+           "160 x 190",
+           "160 x 200",
+           "180 x 190",
+           "180 x 200",
+           "200 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 250
+    },
+    {
+        "id": 33,
+        "name": "Hit-4",
+        "type": "Пружинные",
+        "img": "/imgProducts/vegas/vegas_1.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Пена Serta",
+        "size": [
+            "140 x 200",
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 890
+    },
+    {
+        "id": 34,
+        "name": "Престиж Люкс",
+        "type": "Пружинные",
+        "img": "/imgProducts/eos/eos_3.jpg",
+        "material": "Мягкий",
+        "fill": "Memory пена",
+        "size": [
+            "160 x 200",
+            "180 x 200",
+            "200 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 1550
+    },
+    {
+        "id": 35,
+        "name": "Family Sleep",
+        "type": "Пружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_1.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Ортопедическая пена",
+        "size": [
+            "140 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 600
+    },
+    {
+        "id": 36,
+        "name": "Ультра",
+        "type": "Пружинные",
+        "img": "/imgProducts/belson/belson_4.jpg",
+        "material": "Жёсткий",
+        "fill": "Кокосовая койра",
+        "size": [
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 580
+    },
+    {
+        "id": 37,
+        "name": "Special S2",
+        "type": "Беспружинные",
+        "img": "/imgProducts/vegas/vegas_2.jpg",
+        "material": "Жёсткий",
+        "fill": "Кокосовая койра",
+        "size": [
+            "120 x 200",
+            "140 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Vegas",
+        "price": 1050
+    },
+    {
+        "id": 38,
+        "name": "Орион",
+        "type": "Пружинные",
+        "img": "/imgProducts/eos/eos_1.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Латекс",
+        "size": [
+            "120 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "ЭОС",
+        "price": 990
+    },
+    {
+        "id": 39,
+        "name": "Roll",
+        "type": "Беспружинные",
+        "img": "/imgProducts/fabrika_sna/fabrika_sna_2.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Ортопедическая пена",
+        "size": [
+            "100 x 180",
+            "120 x 200",
+            "140 x 200",
+            "160 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Фабрика Сна",
+        "price": 480
+    },
+    {
+        "id": 40,
+        "name": "Матрас С4",
+        "type": "Беспружинные",
+        "img": "/imgProducts/belson/belson_1.jpg",
+        "material": "Средней жёсткости",
+        "fill": "Кокосовая койра",
+        "size": [
+            "160 x 200",
+            "180 x 200"
+        ],
+        "orthopedic": "есть",
+        "fabricator": "Белсон",
+        "price": 630
+    }
+]

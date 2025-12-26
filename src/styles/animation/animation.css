@@ -1,0 +1,17 @@
+._animate-items {
+    transform: translate(0, 50px); /* Начальная позиция: ниже */
+    opacity: 0;
+    transition: 0.8s ease 0s; 
+  }
+  
+  .animate {
+    transform: translate(0, 30px); /* Начальная позиция: ниже */
+    opacity: 0;
+    transition: 0.8s ease 0s; 
+  }
+  
+  ._activeScroll {
+    transform: translate(0, 0); /* Конечная позиция: на своем месте */
+    opacity: 1; 
+  }
+  

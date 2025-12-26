@@ -1,0 +1,68 @@
+.store-info-container {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: center;
+    justify-content: center;
+    padding-right: 2%;
+    padding-left: 2%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    height: 90%;
+    width: 32%;
+    position: relative;
+    background-color: var(--bg-primary);
+  }
+  .address-info-container {
+    flex: 0 0 auto;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .orange-pill {
+    box-sizing: border-box;
+    width: 27px;
+    height: 45px;
+    background: #e37243;
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+    top: 0;
+  }
+  .address-info-section {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    color: var(--text-primary);
+    text-align: left;
+    width: 100%;
+    
+
+  }
+  .address-info-heading {
+    font: 700 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+    color: var(--text-primary);
+    text-align: left;
+  }
+  .address-info-text-style {
+    font: 400 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+    color: var(--text-primary);
+    text-align: left;
+  }
+  .address-details {
+    font: 400 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+    text-align: left;
+  }
+  .orange-strip {
+    width: 100%; 
+    height: 3%; 
+    background-color: #e37243; 
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+    position: absolute; 
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%);
+   
+  }

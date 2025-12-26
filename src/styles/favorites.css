@@ -1,0 +1,85 @@
+.favorites-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.favorites-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.favorites-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+    font: 700 calc(20px + 6 * (100vw/1440) ) Inter, sans-serif;
+}
+
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.favorites-empty {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.favorites-empty h2 {
+    font: 400 calc(20px + 6 * (100vw/1440) ) Inter, sans-serif;
+    margin-bottom: 15px;
+    color:var(--text-primary);
+}
+
+.favorites-container .favorite-btn img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    display: block;
+
+}
+
+/* Чтобы кнопка не растягивалась */
+.favorites-container .favorite-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 6px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    transition: background-color 0.2s ease;
+}
+
+.favorites-container .favorite-btn:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.favorite-active {
+    background-color: #ffebee;
+}
+
+.product-img-container {
+    position: relative;
+}
+
+.single-favorite-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background: white;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}

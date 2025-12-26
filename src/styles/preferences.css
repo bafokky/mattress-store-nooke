@@ -1,0 +1,113 @@
+.pref-details-container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 60px;
+}
+
+.PrefContainer{
+    display: grid;                         
+    grid-template-columns: repeat(3, minmax(23vw, 1fr)); 
+    width: 70%;
+    justify-content: center;
+    gap:20px;
+    margin: 2vw 8vw 0vw 8vw;
+}
+
+.preferences-card{
+    
+    height: 100%;
+    background-color: var(--bg-primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    display: flex;                      
+    flex-direction: column;            
+    align-items: center;                
+    padding: 0px 30px;
+    position: relative;
+}
+
+.preferences-card__image {
+    width: 9vw;                      
+    height: auto;                     
+    border-radius: 4px;               
+                 
+}
+
+.preferences-card__title{
+    font: 700 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+    text-align: center;
+    padding: 15px;
+    color: var(--text-primary);
+}
+.preferences-card__description{
+    flex-grow: 1;
+    font: 400 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+   padding-bottom: 20px;
+   color: var(--text-primary);
+}
+
+.orange-strip {
+    width: 100%; 
+    height: 3%; 
+    background-color: #e37243; 
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+    position: absolute; 
+  bottom: 0;
+  left: 50%; 
+  transform: translateX(-50%);}
+
+  .pref-title-text-style{
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    font: 700 calc(20px + 6 * (100vw/1440) ) Inter, sans-serif;
+    color: var(--text-primary);
+    padding: 10px 0;
+  }
+  @media (max-width: 480px) {
+    .PrefContainer {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    .pref-title-text-style{
+        font-weight: calc(20px + (6 + 6 * 0.7)*((100vw - 320px)) / 1440);
+    }
+    .preferences-card__description{
+        font-size: calc(12px + (2 + 2 * 0.7)*((100vw - 320px)) / 1440);
+    }
+
+    .preferences-card__title{
+        font-size: calc(12px + (2 + 2 * 0.7)*((100vw - 320px)) / 1440);
+    }
+    .preferences-card__image{
+        width: 20vw;
+    }
+
+  }
+
+  @media (max-width: 960px) and (min-width: 680px) {
+    .PrefContainer {
+        width: 90%;
+    }
+
+    .preferences-card{
+        padding: 1px 10px;
+    }
+  }
+
+  @media (max-width: 680px) and (min-width: 480px) {
+    .PrefContainer {
+        grid-template-columns: 1fr; 
+        gap: 50px;
+    }
+
+    .preferences-card__image{
+        width: 15vw;
+    }
+}

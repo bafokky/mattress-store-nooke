@@ -1,0 +1,364 @@
+/* email.css */
+.email-container {
+  margin: 20px;
+  border-radius: 5px;
+  background-color: var(--bg-primary);
+  width: calc(100% - 40px);
+  max-height: 85vh; /* Ограничиваем высоту */
+  overflow-y: auto; /* Добавляем вертикальную прокрутку */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.email-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-primary);
+  z-index: 10;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.email-container h2 {
+  text-align: start;
+  color: var(--text-primary);
+  font: 700 calc(20px + 6 * (100vw / 1440)) Inter, sans-serif;
+  margin-bottom: 5px;
+  padding-top: 10px;
+}
+
+.email-container h3 {
+  text-align: start;
+  color: var(--text-primary);
+  font: 400 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+  margin-bottom: 15px;
+  max-width: 40%;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0; /* Важно для правильной работы flex внутри скролла */
+}
+
+.input-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.text-only {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: nowrap;
+  flex: 1;
+  min-height: 0;
+}
+
+.input-group {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.input-group label {
+  margin: 0 0 5px 0px;
+  font: 400 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+  color: var(--input);
+}
+
+.text-only label {
+  margin: 0 0 5px 0px;
+  font: 400 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+  color: var(--input);
+}
+
+.email-form input,
+.email-form textarea {
+  padding: 10px 10px;
+  border: 1px solid var(--someItem-primary);
+  background-color: var(--someItem-primary);
+  border-radius: 5px;
+  resize: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-group-textarea-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex: 1;
+  min-height: 0;
+}
+
+.email-form textarea {
+  height: 200px;
+  min-height: 200px;
+  max-height: 300px;
+  padding: 10px;
+  background-color: var(--someItem-primary);
+  border: 1px solid var(--someItem-primary);
+  border-radius: 5px;
+  font: 400 calc(12px + 2 * (100vw / 1440)) Inter, sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  resize: vertical;
+}
+
+.submit-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  padding-top: 20px;
+}
+
+.email-form input:focus,
+.email-form textarea:focus {
+  border-color: #e37243;
+  outline: none;
+}
+
+.email-form button:hover {
+  background-color: #c76338;
+}
+
+.send-btn {
+  margin-top: 15px;
+  min-width: 180px;
+}
+
+.order-preview {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  max-height: 250px;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.order-preview h4 {
+  font: 700 calc(16px + 2 * (100vw/1440)) Inter, sans-serif;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background: #f9f9f9;
+  padding: 5px 0;
+}
+
+.order-items-list {
+  max-height: 150px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item-name {
+  font: 500 calc(14px + 2 * (100vw/1440)) Inter, sans-serif;
+  color: #333;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.order-item-details {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.order-item-price {
+  font: 600 calc(14px + 2 * (100vw/1440)) Inter, sans-serif;
+  color: #e37243;
+  min-width: 100px;
+  text-align: right;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0 5px;
+  font: 700 calc(16px + 2 * (100vw/1440)) Inter, sans-serif;
+  color: #333;
+  border-top: 2px solid #ddd;
+  position: sticky;
+  bottom: 0;
+  background: #f9f9f9;
+}
+
+.total-amount {
+  color: #e37243;
+  font-size: calc(18px + 2 * (100vw/1440));
+}
+
+.form-note {
+  font: 400 calc(12px + 2 * (100vw/1440)) Inter, sans-serif;
+  color: #666;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* Стили для модального окна */
+.modal-overlay .email-container {
+  max-height: 90vh !important;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Кастомный скроллбар */
+.email-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.email-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.email-container::-webkit-scrollbar-thumb {
+  background: #e37243;
+  border-radius: 4px;
+}
+
+.email-container::-webkit-scrollbar-thumb:hover {
+  background: #c76338;
+}
+
+.order-items-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.order-items-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .email-container {
+      margin: 10px;
+      max-height: 80vh;
+      width: calc(100% - 20px);
+  }
+  
+  .input-group-textarea-group {
+      flex-direction: column;
+      gap: 15px;
+  }
+  
+  .submit-group {
+      justify-content: center;
+      width: 100%;
+  }
+  
+  .send-btn {
+      width: 100%;
+      min-width: auto;
+  }
+  
+  .order-preview {
+      max-height: 200px;
+  }
+  
+  .email-container h3 {
+      max-width: 100%;
+  }
+  
+  .email-form textarea {
+      height: 180px;
+      min-height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .email-container {
+      margin: 5px;
+      padding: 10px;
+      max-height: 75vh;
+      width: calc(100% - 10px);
+  }
+  
+  .email-container h2 {
+      font-size: calc(18px + 4 * (100vw / 1440));
+  }
+  
+  .email-container h3 {
+      font-size: calc(12px + 2 * 0.7 * ((100vw - 320px) / 1440));
+      margin-bottom: 10px;
+  }
+  
+  .input-group {
+      min-width: 100%;
+  }
+  
+  .input-row {
+      gap: 10px;
+  }
+  
+  .email-form textarea {
+      height: 160px;
+      min-height: 160px;
+      max-height: 200px;
+  }
+  
+  .order-preview {
+      max-height: 180px;
+      padding: 10px;
+  }
+  
+  .order-item {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+  }
+  
+  .order-item-details {
+      width: 100%;
+      justify-content: space-between;
+  }
+  
+  .order-item-price {
+      text-align: left;
+      min-width: auto;
+  }
+}
+
+@media (max-width: 960px) and (min-width: 480px) {
+  .email-container h3 {
+      max-width: 100%;
+  }
+  
+  .input-group-textarea-group {
+      flex-wrap: wrap;
+  }
+}

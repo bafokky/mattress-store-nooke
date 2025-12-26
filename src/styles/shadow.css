@@ -1,0 +1,89 @@
+/* ==========================================
+   1. БАЗОВЫЕ СТИЛИ (БЕЗ ВЛОЖЕННОСТЕЙ)
+   ========================================== */
+
+   .container {
+    @apply tw-relative tw-flex tw-justify-center;
+    @apply tw-w-full tw-h-[800px] tw-box-border;
+    @apply tw-mb-[60px];
+  }
+  
+  .shadow-container {
+    @apply tw-w-[60%] tw-h-full tw-flex tw-flex-col tw-justify-center tw-items-start;
+    @apply tw-px-[20%] tw-py-[20px] tw-text-white;
+  }
+  
+  .slider-container {
+    @apply tw-relative tw-overflow-hidden;
+    @apply tw-w-[70%] tw-h-full;
+  }
+  
+  .slider-image {
+    @apply tw-w-full tw-h-full tw-object-cover;
+  }
+  
+  .shadow-overlay {
+    @apply tw-absolute tw-top-0 tw-left-0 tw-z-[3];
+    @apply tw-w-full tw-h-full tw-flex tw-justify-start tw-items-center;
+  }
+  
+  .mattress-both {
+    @apply tw-w-full tw-max-w-[700px] tw-h-full;
+    @apply tw-flex tw-justify-center tw-text-left;
+    @apply tw-bg-cover tw-bg-no-repeat tw-bg-[url('../assets/img/shadow.png')];
+  }
+  
+  .mattress-sales-section {
+    @apply tw-flex tw-flex-col tw-h-[340px] tw-justify-between;
+  }
+  
+  .mattress-description-container {
+    @apply tw-flex tw-flex-row tw-items-center tw-justify-end tw-align-middle;
+    @apply tw-flex-none tw-h-[90px] tw-self-end;
+  }
+  
+  .mattress-divider {
+    @apply tw-w-[3px] tw-h-full tw-mr-[17px] tw-bg-[#e37243] tw-rounded-[1px] tw-flex-none;
+  }
+  
+  .mattress-text-block {
+    @apply tw-text-left tw-font-bold;
+    @apply tw-text-[calc(20px+6*(100vw/1440))] tw-font-['Inter',_sans-serif];
+  }
+  
+  .product-description-text-style {
+    @apply tw-w-[270px] tw-mb-[30px] tw-p-0 tw-m-0 tw-flex-none;
+    @apply tw-text-left tw-text-[#b6b6b6] tw-font-extralight;
+    @apply tw-text-[calc(12px+2*(100vw/1440))] tw-font-['Inter',_sans-serif];
+  }
+  
+  .mattress-button-container {
+    @apply tw-w-fit;
+  }
+  
+  .mattress-button-container > .detail-button {
+    @apply tw-flex tw-justify-center tw-items-center tw-mt-[20px] tw-px-5 tw-py-2.5 tw-block;
+  }
+  
+  /* ==========================================
+     2. АДАПТИВНОСТЬ (ВЫНЕСЕНА НА ВЕРХНИЙ УРОВЕНЬ)
+     ========================================== */
+  
+  @media (max-width: 980px) {
+    .container {
+      @apply tw-h-[500px];
+    }
+  
+    .shadow-container {
+      @apply tw-z-[5] tw-pl-[13%] tw-pr-[30%] tw-py-[20px];
+    }
+  
+    .slider-container {
+      @apply tw-hidden;
+    }
+  
+    .mattress-both::before {
+      @apply tw-content-[''] tw-absolute tw-top-0 tw-left-0 tw-z-0;
+      @apply tw-w-full tw-h-[500px] tw-bg-[url('../assets/img/slider_2.jpg')];
+    }
+  }

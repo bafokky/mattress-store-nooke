@@ -1,0 +1,53 @@
+/* 1. Базовые стили для мобилок и десктопа по умолчанию */
+.transparent-overlay-container {
+  @apply tw-text-center tw-h-[45vh] tw-bg-fixed tw-bg-no-repeat tw-bg-center tw-bg-cover 
+         tw-bg-[url('../assets/img/slider3.jpg')] tw-bg-black/50 
+         tw-flex tw-justify-center tw-mb-[10px];
+
+  @apply min-[580px]:tw-mb-[60px];
+}
+
+/* 2. Отдельный блок для высоты экрана (ВЫНОСИМ ИЗ КЛАССА) */
+@media (min-height: 980px) {
+  .transparent-overlay-container {
+    @apply tw-h-[30vh] tw-mb-[30px];
+  }
+}
+
+/* Затемняющий слой */
+.shadow {
+  @apply tw-bg-[rgba(56,53,52,0.7)] tw-h-[45vh] tw-w-full;
+}
+
+@media (min-height: 980px) {
+  .shadow {
+    @apply tw-h-[30vh];
+  }
+}
+
+/* Заголовок страницы */
+.product-title-text-style {
+  @apply tw-pt-[20vh] tw-pb-[2vh] tw-flex tw-justify-center tw-mx-auto
+         tw-font-bold tw-text-[26px] tw-font-['Inter',_sans-serif] tw-text-[#f2f2f2];
+}
+
+@media (min-height: 980px) {
+  .product-title-text-style {
+    @apply tw-pt-[11vh] tw-pb-[1vh];
+  }
+}
+
+/* Хлебные крошки */
+.product-info-heading {
+  @apply tw-font-bold tw-text-[18px] tw-font-['Inter',_sans-serif] tw-text-[#bdbdbd];
+}
+
+.product-info-heading a {
+  @apply tw-no-underline tw-text-[#bdbdbd] 
+         hover:tw-text-[#bdbdbd] hover:tw-no-underline
+         active:tw-text-[#bdbdbd] visited:tw-text-[#bdbdbd];
+}
+
+.product-info-heading span {
+  @apply tw-text-[14px] tw-text-[#bdbdbd];
+}
