@@ -38,7 +38,7 @@ const Slider: React.FC = () => {
           <button
             key={index}
             onClick={() => handleButtonClick(index)}
-            className={`tw-w-[15px] tw-h-[15px] tw-border-none tw-rounded-full tw-cursor-pointer tw-transition-colors tw-duration-300 after:tw-content-[''] after:tw-block after:tw-w-full after:tw-h-full after:tw-rounded-full tw-bg-[rgba(227,114,67,1)] tw-bg-[rgba(227,114,67,0.9)] ${
+            className={`tw-w-[15px] tw-h-[15px] tw-border-none tw-rounded-full tw-cursor-pointer tw-transition-colors tw-duration-300 after:tw-content-[''] after:tw-block after:tw-w-full after:tw-h-full after:tw-rounded-full tw-bg-[rgba(227,114,67,1)] ] ${
               currentImageIndex === index ? 'active' : ''
             }`}
             aria-label={`Go to slide ${index + 1}`} 

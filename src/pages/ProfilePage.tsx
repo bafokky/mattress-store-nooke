@@ -12,7 +12,7 @@ const ProfilePage: React.FC<ProfilePageProps> = ({ onLogout }) => {
   const [username, setUsername] = useState<string>("");
 
   useEffect(() => {
-    const storedUser = localStorage.getItem("user");
+    const storedUser = localStorage.getItem("currentUser");
     if (storedUser) {
       const userObj = JSON.parse(storedUser);
       if (userObj?.username) setUsername(userObj.username);
