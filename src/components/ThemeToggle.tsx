@@ -4,7 +4,7 @@ import lIcon from "../assets/light.svg";
 import dIcon from "../assets/dark.svg";
 
 const ThemeToggle: React.FC = () => {
-  const [isDark, setIsDark] = useState<boolean>(false);
+  const [isDark, setIsDark] = useState<boolean>(false);  //хук для смены темы
 
   useEffect(() => {
     document.body.classList.toggle("dark-theme", isDark);

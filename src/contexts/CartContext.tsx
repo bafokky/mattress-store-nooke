@@ -1,6 +1,5 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
+import React, { createContext, useState, useContext, useEffect, ReactNode, useCallback } from 'react';
 
-//структура товара в корзине
 export interface CartItem {
     id: number | string;
     price: number;
@@ -41,21 +40,44 @@ interface CartProviderProps {
 }
 
 export const CartProvider: React.FC<CartProviderProps> = ({ children }) => {
-  //инициализация состояния из локалсторедж
-    const [cartItems, setCartItems] = useState<CartItem[]>(() => {
-        const savedCart = localStorage.getItem('cart');
+    
+    //получение ключа пользователя
+    const getStorageKey = useCallback(() => {
+        const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+        return user && user.username ? `cart_${user.username}` : 'cart_guest';
+    }, []);
+
+    //инициализация состояния
+    const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
+    //загрузка данных при смене пользователя
+    const loadCart = useCallback(() => {
+        const key = getStorageKey();
+        const savedCart = localStorage.getItem(key);
         try {
-            return savedCart ? JSON.parse(savedCart) : [];
+            setCartItems(savedCart ? JSON.parse(savedCart) : []);
         } catch (e) {
             console.error("Failed to parse cart from localStorage", e);
-            return [];
+            setCartItems([]);
         }
-    });
+    }, [getStorageKey]);
 
-    //сохранение
     useEffect(() => {
-        localStorage.setItem('cart', JSON.stringify(cartItems));
-    }, [cartItems]);
+        loadCart();
+        //слушает смену пользователя
+        const handleAuthChange = () => {
+            loadCart();
+        };
+
+        window.addEventListener('auth-change', handleAuthChange);
+        return () => window.removeEventListener('auth-change', handleAuthChange);
+    }, [loadCart]);
+
+    //создание данных при изменении корзины
+    useEffect(() => {
+        const key = getStorageKey();
+        localStorage.setItem(key, JSON.stringify(cartItems));
+    }, [cartItems, getStorageKey]);
 
     const addToCart = (product: any, quantity: number = 1) => {
         setCartItems(prevItems => {

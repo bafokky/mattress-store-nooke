@@ -1,6 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 
-//структура товара
 export interface FavoriteItem {
   id: number | string;
   name: string;
@@ -40,25 +39,50 @@ export const FavoritesProvider: React.FC<FavoritesProviderProps> = ({ children }
   const [favorites, setFavorites] = useState<FavoriteItem[]>([]);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
-//загрузка избранного из локалсторедж
-  useEffect(() => {
-    const savedFavorites = localStorage.getItem('favorites');
+  //получение ключа текущего пользователя
+  const getStorageKey = useCallback(() => {
+    const user = JSON.parse(localStorage.getItem('currentUser') || '{}');
+    return user && user.username ? `favorites_${user.username}` : 'favorites_guest';
+  }, []);
+
+  //загрузка даных
+  const loadFavorites = useCallback(() => {
+    setIsLoaded(false);
+    const key = getStorageKey();
+    const savedFavorites = localStorage.getItem(key);
+    
     if (savedFavorites) {
       try {
         setFavorites(JSON.parse(savedFavorites));
       } catch (error) {
         console.error("Ошибка парсинга избранного:", error);
+        setFavorites([]);
       }
+    } else {
+      setFavorites([]);
     }
     setIsLoaded(true);
-  }, []);
+  }, [getStorageKey]);
 
- //сохранение избранного
+  //инициализация и подписка на смену пользователя
+  useEffect(() => {
+    loadFavorites();
+
+    const handleAuthChange = () => {
+      loadFavorites();
+    };
+
+    window.addEventListener('auth-change', handleAuthChange);
+    return () => window.removeEventListener('auth-change', handleAuthChange);
+  }, [loadFavorites]);
+
+  //созранение избранного при изменении
   useEffect(() => {
     if (isLoaded) {
-      localStorage.setItem('favorites', JSON.stringify(favorites));
+      const key = getStorageKey();
+      localStorage.setItem(key, JSON.stringify(favorites));
     }
-  }, [favorites, isLoaded]);
+  }, [favorites, isLoaded, getStorageKey]);
 
   const addToFavorites = (product: FavoriteItem) => {
     setFavorites(prev => {
